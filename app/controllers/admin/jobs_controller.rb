@@ -32,7 +32,7 @@ class Admin::JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     if @job.update(job_params)
-      redirect_to jobs_path, notice: "Update job info success"
+      redirect_to admin_jobs_path, notice: "Update job info success"
     else
       render :edit
     end
@@ -43,7 +43,7 @@ class Admin::JobsController < ApplicationController
 
     @job.destroy
 
-    redirect_to jobs_path, alert: "Deleted job info success"
+    redirect_to admin_jobs_path, alert: "Deleted job info success"
   end
 
   def publish
