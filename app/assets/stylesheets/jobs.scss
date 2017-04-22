@@ -9,7 +9,7 @@ thead {
 
 
 
-tbody tr{background: #C5E1A5;}
+tbody tr:nth-child(odd) {background: #C5E1A5;} 
 tbody tr:nth-child(even){background: #BCAAA4;}
 
 #dropdownMenuDivider {
