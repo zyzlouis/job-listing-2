@@ -13,6 +13,13 @@ class JobsController < ApplicationController
               end
     end
 
+#  def index
+#    @search = Job.ransack(params[:q]）
+#    @jobs = @search.result.where(is_hidden: false)
+#  end
+
+
+
   def show
     @job = Job.find(params[:id])
     if @job.is_hidden
@@ -58,8 +65,8 @@ class JobsController < ApplicationController
 
   def search
     if @query_string.present?
-      search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
-      @jobs = search_result
+      @jobs = Job.published.ransack(@search_criteria).result(:distinct => true)
+  #    @jobs = search_result
     end
   end
 
@@ -69,7 +76,7 @@ class JobsController < ApplicationController
     @query_string = params[:q].gsub(/\\|\'|\/|\?/, "")
     if params[:q].present?
       @search_criteria = {
-        title_or_description_or_category_or_company_or_city_cont: @query_string
+        title_cont: @query_string
       }
     end
   end
