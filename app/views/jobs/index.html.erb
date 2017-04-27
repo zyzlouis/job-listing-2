@@ -29,6 +29,12 @@
                 薪资上限<i class="fa fa-caret-down"></i></a>
             </td>
             <td>
+              <span id="acolor">公司</span>
+            </td>
+            <td>
+              <span id="acolor">工作地点</span>
+            </td>
+            <td>
               <a class="btn btn-xs btn-default" href="/jobs" id="acolor">
               发布时间<i class="fa fa-caret-down"></i></a></td>
             </td>
@@ -46,6 +52,12 @@
             </td>
             <td>
                 <%= job.wage_upper_bound %>
+            </td>
+            <td>
+                <%= job.company %>
+            </td>
+            <td>
+                <span class="fa fa-map-marker"></span> <%= job.location %>
             </td>
             <td>
                 <%= job.created_at %>
