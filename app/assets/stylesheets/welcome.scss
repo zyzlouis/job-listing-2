@@ -6,3 +6,59 @@
 .ulsize {
   font-size: 16px;
 }
+
+h4.saying {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.5;
+  padding-top: 80px;
+  font-style: italic;
+}
+
+.jumbotron2 {
+  background-image: url("sport-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+  margin-bottom: 0px;
+}
+
+h2.candidates-review {
+  margin: 70px 0 70px 0;
+  font-size: 48px;
+  color: #000;
+  margin-bottom: 60px;
+}
+
+
+.goTop {
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  position: fixed;
+  top: 90%;
+  right: 3%;
+  display: none;
+  box-shadow: 1px 1px 3px #666
+}
+
+.goTop span {
+  color: #000;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 20px
+}
+
+.goTop:hover {
+  background-color: #17bba8
+}
+
+.goTop:hover span {
+  color: #fff
+}
+
+.move-center {
+  padding-left: 150px;
+}

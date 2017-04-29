@@ -38,12 +38,12 @@
         <tbody>
           <% if @query_string.blank? %>
             <div class="search-info-title">
-              Sorry, The search content cannot be blank, please type some product into to search.
+              搜索信息不能为空，请输入关键字搜索.
             </div>
 
           <% elsif @jobs.blank? %>
             <br>
-            <h2 class="search-info-title">搜索信息不能为空，请输入关键字搜索</h2>
+            <h2 class="search-info-title">没有要查询的职位信息，请重新输入</h2>
           <% else %>
 
             <% @jobs.each do |job| %>
