@@ -41,8 +41,32 @@
       <a class="navbar-brand" href="/">We Health</a>
     </div>
 
+    <div class="city-change">
+      <ul class="nav navbar-nav">
+        <li style="font-size: 0.4em; color: white; margin-top: 1.5em;">全国</li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 0.5em; margin: auto;">[切换城市]<span class="caret"></span></a>
+          <ul class="dropdown-menu" id="bootstrap-override-1">
+            <ul class="list-inline" style="30px;">
+              <li><a class="bootstrap-override-2" href="/jobs">全国</a></li>
+              <li><a class="bootstrap-override-2" href="/bj">北京</a></li>
+              <li><a class="bootstrap-override-2" href="#">上海</a></li>
+              <li><a class="bootstrap-override-2" href="#">深圳</a></li>
+              <li><a class="bootstrap-override-2" href="#">广州</a></li>
+              <li><a class="bootstrap-override-2" href="#">福州</a></li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav nav-pills" id="nav-1">
+        <li class="active"><a href="/jobs">首页</a></li>
+        <li><a href="#">健康有你</a></li>
+        <li><a href="#">精彩案例</a></li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right">
         <li>
               <% if !current_user %>

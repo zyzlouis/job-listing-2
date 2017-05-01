@@ -7,151 +7,155 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
+ * files in this directory. Stnav-1nav-1yles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  *= require font-awesome
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
- @import "font-awesome";
+@import "bootstrap-sprockets";
+
+@import "bootstrap";
+
+@import "font-awesome";
 
  //---------Navbar---------
 
  .navbar-default {
-     background-color: rgba(38, 35, 35, 0.75);
-     border-color: rgba(38, 35, 35, 0.75);
-     margin-bottom: 0;
-     border-radius: 0;
- }
+  background-color: rgba(38, 35, 35, 0.75);
+  border-color: rgba(38, 35, 35, 0.75);
+  margin-bottom: 0;
+  border-radius: 0;
+}
 
- .navbar-default .navbar-brand {
-     color: #fff;
-     padding: 10px 15px;
-     line-height: 30px;
- }
+.navbar-default .navbar-brand {
+  color: #fff;
+  padding: 10px 15px;
+  line-height: 30px;
+}
 
- .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #FF6F00;
-     background-color: transparent;
- }
+  color: #FF6F00;
+  background-color: transparent;
+}
 
- .navbar-default .navbar-nav > li > a {
-     color: #fff;
- }
+.navbar-default .navbar-nav > li > a {
+  color: #cdc9c9;
+}
 
- .navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #FF6F00;
-     background-color: transparent;
- }
+  color: #FF6F00;
+  background-color: transparent;
+}
 
- .navbar-default .navbar-nav > .active > a,
+//add focus color
+a:hover,a:focus {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-     color: #FF6F00;
-     background-color: #FFE0B2;
- }
+  color: #fff;
+  background-color: #000;
+}
 
- .navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
  .navbar-default .navbar-nav > .open > a:hover {
-     background-color: #FFE0B2;
-     color: #212121;
- }
+  background-color: #000;
+  color: #fff;
+}
 
 
 //---------Box---------
 
 .box {
-    background-image: url("fit-header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 50px;
-
-
-    .box-inner {
+  background-image: url("fit-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+  .box-inner {
     //    background-color: rgba(250, 250, 250, 0.69);
-        padding-bottom: 5px;
-        margin-top: 150px;
-        margin-bottom: 150px;
-        margin-left: 50px;
-        opacity: 0.9;
-    }
+  padding-bottom: 5px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 50px;
+  opacity: 0.9;
+}
 
-    .title {
-        text-align: center;
-        margin-bottom: 80px;
-    }
+.title {
+  text-align: center;
+  margin-bottom: 80px;
+}
 
-    .slogan {
-        color: rgb(217, 8, 45);
-        margin-top: 5px;
-        margin-bottom: 50px;
-        text-align: center;
-        font-size: 36px;
-        top: 12px;
-        font-weight: bold;
-    }
+.slogan {
+  color: rgb(217, 8, 45);
+  margin-top: 5px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 36px;
+  top: 12px;
+  font-weight: bold;
+}
 
-    .lead {
-        margin-bottom: 60px;
-        text-align: center;
-        color: white;
-    }
+.lead {
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+}
 }
 
 //---------Content---------
 
 .content-section-a {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+  padding: 50px 0;
+  background-color: #f8f8f8;
 }
 
 .content-section-b {
-    padding: 50px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+  padding: 50px 0;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
 }
 
 .section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
 }
 
 .section-heading {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .lead {
-    font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 //---------Footer---------
 
 footer {
-    color: #795548;
-//    background-color: #
+  color: #795548;
+  //    background-color: #
 }
 
 footer .footer-below {
-    padding: 25px 0;
-    background-color: #B0BEC5;
+  padding: 25px 0;
+  background-color: #B0BEC5;
 }
 
 //------private use ------
 .fit {
- background-image:url('fit-header.jpg');
- background-repeat: no-repeat;
- background-size: cover;
- padding-bottom: 110px;
+  background-image: url('fit-header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
 }
-
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
@@ -160,7 +164,7 @@ footer .footer-below {
   padding: 30px;
   max-width: 350px;
   width: 100% !important;
-  background-color: #A1887F;
+  //  background-color: #A18F;
   margin: 0 auto;
   border-radius: 2px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -172,6 +176,14 @@ footer .footer-below {
   text-align: center;
   font-size: 1.8em;
   font-family: roboto;
+}
+
+.loginmodal-container h2 {
+  color: #fff
+}
+
+.loginmodal-container label {
+  color: #d9d9d9
 }
 
 .loginmodal-container input[type=submit] {
@@ -246,23 +258,23 @@ footer .footer-below {
   transition: opacity ease 0.5s;
 }
 
-.login-help{
+.login-help {
   font-size: 12px;
 }
 
-.full-page{
-//  margin-left: -15px;
-//  margin-right: 15px;
+.full-page {
+  //  margin-left: -15px;
+  //  margin-right: 15px;
 }
 
-.custab{
+.custab {
   border: 1px solid #ccc;
   margin-top: 5px;
   box-shadow: 3px 3px 2px #ccc;
   transition: 0.5s;
 }
 
-.custab:hover{
+.custab:hover {
   box-shadow: 3px 3px 0px transparent;
   transition: 0.5s;
 }
@@ -274,14 +286,14 @@ footer .footer-below {
   font-weight: bold;
 }
 
-// alert position
+//alert position
 
 .alert {
   margin-top: 50px;
   margin-bottom: 0px;
 }
 
-// add footer css
+//add footer css
 
 .footer {
   text-align: center;
@@ -353,4 +365,46 @@ footer .footer-below {
 
 .footer-content img:hover {
   opacity: 1
+}
+
+.nav-pills > li {
+  float: left;
+}
+
+.nav-pills > li > a {
+  border-radius: 4px;
+}
+
+#nav-1 {
+  margin-left: 3em;
+}
+
+.city-change {
+  margin-left: 12em;
+}
+
+#bootstrap-override-1 {
+  min-width: 100em;
+  background-color: rgba(38, 35, 35, 0.75);
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  opacity: 0.8;
+}
+
+.bootstrap-override-2 {
+  color: rgb(255, 112, 82);
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+  color: #fff;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
 }
