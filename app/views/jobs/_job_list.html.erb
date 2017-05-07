@@ -1,0 +1,83 @@
+<div class="col-md-12">
+  <div class="col-md-12">
+    <ul class="nav nav-tabs" role="tablist" id="myTab">
+      <li role="presentation" class="active">
+        <a href="" role="tab" data-toggle="tab">职位信息</a>
+      </li>
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          筛选
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li role="presentation">
+            <a href="/jobs?order=created_at">更新时间排序</a>
+          </li>
+          <li role="presentation">
+            <a href="/jobs?order=by_upper_bound">薪资上限排序</a>
+          </li>
+          <li role="presentation">
+            <a href="/jobs?order=by_lower_bound">薪资下限排序</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <% @jobs.each do |job| %>
+    <div class="row">
+      <div class="col-md-6">
+        <span style="font-size:1.3em">
+          <i class="fa fa-paw" aria-hidden="true"></i><%= link_to(job.title, job_path(job))%></span>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:10px;">
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-handshake-o"></i>
+          企业名称：<%= job.company %></span>
+      </div>
+      <div class="col-md-3">
+        <span class="badge badge-info">
+          薪资：
+          <span style="font-size:1em;" class="fa fa-rmb"></span><%= job.wage_lower_bound %>
+          -
+          <%= job.wage_upper_bound %>
+          元
+        </span>
+      </div>
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-envelope-open-o"></i>
+          邮箱地址：</span>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:5px;">
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-paper-plane-o" aria-hidden="true" style="color: black;"></i>
+          城市：<%= job.location %></span>
+      </div>
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-thumbs-o-up"></i>
+          招聘人数：5</span>
+      </div>
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-thumbs-up"></i>
+          竞聘人数：3</span>
+      </div>
+      <div class="col-md-3">
+        <span style="font-size:1em;">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          发布于：<%= job.created_at %></span>
+      </div>
+    </div>
+    <hr>
+
+    <% end %>
+
+  </div>
+</div>

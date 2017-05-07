@@ -1,76 +1,25 @@
-<div class="fitgirl">
-  <div class="container">
-      <%= render :partial => "jobs/fit_job_intro" %>
-  </div>
 <div>
-    <div class="search">
-        <%= render :partial => "jobs/search_bar" %>
+  <div class="container">
+    <%= render :partial => "jobs/fit_job_intro" %>
+  </div>
+  <div>
+
+    <div>
+
+      <% if @query_string.blank? %>
+      <div class="search-info-title">
+        <h2 class="search-info-title">搜索信息不能为空，请输入关键字搜索.</h2>
+      </div>
+
+      <% elsif @jobs.blank? %>
+      <br>
+      <h2 class="search-info-title">没有要查询的职位信息，请重新输入</h2>
+      <% else %>
+      <%= render :partial => "jobs/job_list" %>
+      <% end %>
+      <div class="text-center">
+        <%= will_paginate @jobs %>
+      </div>
     </div>
-
-    <table class="table table-boldered tableopacity ">
-        <thead>
-            <tr>
-                <td>
-                  <a class="btn btn-xs btn-default" href="/jobs" id="acolor">
-                  岗位名称<i class="fa fa-caret-down"></i></a></td>
-                </td>
-                <td>
-                    <a class="btn btn-xs btn-default" href="/jobs?order=by_lower_bound" id="acolor">
-                    薪资上限<i class="fa fa-caret-down"></i></a>
-                </td>
-                <td>
-                    <a class="btn btn-xs btn-default" href="/jobs?order=by_upper_bound" id="acolor">
-                    薪资下限<i class="fa fa-caret-down"></i></a>
-                </td>
-                <td>
-                  <span id="acolor">公司</span>
-                </td>
-                <td>
-                  <span id="acolor">工作地点</span>
-                </td>
-                <td>
-                  <a class="btn btn-xs btn-default" href="/jobs" id="acolor">
-                  发布时间<i class="fa fa-caret-down"></i></a></td>
-                </td>
-            </tr>
-
-        </thead>
-        <tbody>
-          <% if @query_string.blank? %>
-            <div class="search-info-title">
-              搜索信息不能为空，请输入关键字搜索.
-            </div>
-
-          <% elsif @jobs.blank? %>
-            <br>
-            <h2 class="search-info-title">没有要查询的职位信息，请重新输入</h2>
-          <% else %>
-
-            <% @jobs.each do |job| %>
-            <tr>
-                <td>
-                    <%= link_to(job.title, job_path(job)) %>
-                </td>
-                <td>
-                    <%= job.wage_lower_bound %>
-                </td>
-                <td>
-                    <%= job.wage_upper_bound %>
-                </td>
-                <td>
-                    <%= job.company %>
-                </td>
-                <td>
-                    <span class="fa fa-map-marker"></span><%= job.location %>
-                </td>
-                <td>
-                    <%= job.created_at %>
-                </td>
-            </tr>
-            <% end %>
-            <% end %>
-        </tbody>
-
-    </table>
-</div>
+  </div>
 </div>
