@@ -1,4 +1,4 @@
-// Place all the styles related to the jobs controller here.
+//Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -11,49 +11,70 @@ thead {
   opacity: 0.5;
 }
 
-
-tbody { color:rgb(17, 17, 20);font-weight: bold;}
-tbody tr:nth-child(odd) {background: #69F0AE;}
-tbody tr:nth-child(even){background: #69F091;}
-
-#dropdownMenuDivider {
-    color: #ccc;//字体颜色
-
-     background-color: #607D8B;//背景颜色
-
-     border-color: #EF6C00;//边框颜色
+tbody {
+  color: rgb(17, 17, 20);
+  font-weight: bold;
 }
 
- #dropdownMenuDivider-danger:hover {
-     background-color: #E65100;//鼠标放置在btn上的背景颜色
+tbody tr:nth-child(odd) {
+  background: #69F0AE;
+}
 
-     border-color: #E65100;//鼠标放置在btn上的边框颜色
- }
+tbody tr:nth-child(even) {
+  background: #69F091;
+}
+
+#dropdownMenuDivider {
+  color: #ccc;
+  //字体颜色
+
+     background-color: #607D8B;
+  //背景颜色
+
+     border-color: #EF6C00;
+  //边框颜色
+}
+
+#dropdownMenuDivider-danger:hover {
+  background-color: #E65100;
+  //鼠标放置在btn上的背景颜色
+
+     border-color: #E65100;
+  //鼠标放置在btn上的边框颜色
+}
 
 .fitgirl2 {
-   padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
-   margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-   border-radius: 0;//圆角为0
-   width: 300px;//最大宽度
+  padding-bottom: 110px;
+  //内部的底部边距，这样按钮不会很靠近底部了
+   margin: 0 -15px 20px;
+  //顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+   border-radius: 0;
+  //圆角为0
+   width: 300px;
+  //最大宽度
    height: 200px
- }
+}
 
- .girl {
-   width: "100%";
-   height: "100%";
- }
+.girl {
+  width: "100%";
+  height: "100%";
+}
 
- .fitgirl {
-  background-image:url('fit-girl.jpg');
+.fitgirl {
+  background-image: url('fit-girl.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 600px;
- }
+  padding-bottom: 6px;
+}
 
- #search {
-   background-color: #A7FFEB;
- }
+#search {
+  background-color: #A7FFEB;
+}
 
- .position {
-   margin-top: 15px;
- }
+.position {
+  margin-top: 15px;
+}
+
+.fitjob-position {
+  margin-top: 50px;
+}
